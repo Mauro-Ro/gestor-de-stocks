@@ -1,0 +1,13 @@
+# Entornos virtuales de Poetry
+
+
+# Archivos de compilación de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Configuraciones sensibles
+.env
+
+# Archivos de Poetry
+poetry.lock
