@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar d-flex flex-column">
+        <h4 class="text-center">Gestión de Stock</h4>
+        <a href="#">Inicio</a>
+        <a href="productos">Productos</a>
+        <a href="#">Categorías</a>
+        <a href="#">Proveedores</a>
+        <a href="#">Inventarios</a>
+        <a href="#">Reportes</a>
+        <a href="#">Usuarios</a>
+        <a href="#">Perfil</a>
+        <a href="#">Cerrar Sesión</a>
+    </div>
+
+
+    <script>
+        const sidebar = document.querySelector('.sidebar');
+        const toggleSidebar = document.querySelector('#toggleSidebar');
+        toggleSidebar.addEventListener('click', () => {
+        sidebar.classList.toggle('d-none');
+        });
+    </script>
+</body>
+</html>

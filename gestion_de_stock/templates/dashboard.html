@@ -1,11 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-</head>
-<body>
-    <p>Este es tu panel principal.</p>
-</body>
-</html>
+{% extends "base.html" %}
+
+
+{% block content %}
+
+    <!-- Contenedor principal -->
+    <div class="container mt-4">
+
+        <!-- Fila para las estadísticas principales -->
+        <div class="row">
+            <!-- Total de productos -->
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header bg-primary text-white">
+                        <h5>Total de Productos</h5>
+                    </div>
+                    <div class="card-body stat-card">
+                        <h2>1,245</h2>
+                        <p>Productos en total</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productos más vendidos -->
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header bg-success text-white">
+                        <h5>Productos Más Vendidos</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Producto A</li>
+                            <li>Producto B</li>
+                            <li>Producto C</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productos con stock bajo -->
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header bg-warning text-dark">
+                        <h5>Productos con Stock Bajo</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Producto D (10 unidades)</li>
+                            <li>Producto E (5 unidades)</li>
+                            <li>Producto F (3 unidades)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila para la tabla de inventario -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Inventario Completo</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Producto</th>
+                                    <th>Categoría</th>
+                                    <th>Stock</th>
+                                    <th>Precio</th>
+                                    <th>Stock Crítico</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Producto A</td>
+                                    <td>Electrónica</td>
+                                    <td>120</td>
+                                    <td>$30.00</td>
+                                    <td><div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Producto B</td>
+                                    <td>Ropa</td>
+                                    <td>250</td>
+                                    <td>$15.00</td>
+                                    <td><div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Producto C</td>
+                                    <td>Juguetes</td>
+                                    <td>80</td>
+                                    <td>$25.00</td>
+                                    <td><div class="progress">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Producto D</td>
+                                    <td>Hogar</td>
+                                    <td>15</td>
+                                    <td>$10.00</td>
+                                    <td><div class="progress">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div></td>
+                                </tr>
+                                <!-- Más productos pueden ser agregados aquí -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
